@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Keyboard from './keyboard';
-import Cursor from './cursor';
+import Keyboard from './Keyboard';
+import Cursor from './Cursor';
 import '../styles/App.css'
 
 class App extends Component {
