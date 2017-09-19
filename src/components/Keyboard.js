@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/keyboard.css'
+import '../styles/Keyboard.css'
 
 class Keyboard extends Component{
 
