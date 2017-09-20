@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import '../styles/Keyboard.css'
+import PropTypes from 'prop-types';
+import '../styles/keyboard.css'
 
 class Keyboard extends Component{
 
@@ -26,4 +27,8 @@ class Keyboard extends Component{
         )
     }
 }
-export default Keyboard
+Keyboard.propTypes = {
+    handleClick: React.PropTypes.func.isRequired
+};
+
+export default Keyboard;

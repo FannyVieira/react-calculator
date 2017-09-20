@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class Cursor extends Component{
-    
+class Cursor extends Component{ 
     render(){
         return(
             <div className="top">
@@ -10,5 +10,8 @@ class Cursor extends Component{
         )
     }
 }
+Cursor.propTypes = {
+    textScreen: React.PropTypes.string.isRequired
+};
 
 export default Cursor;
