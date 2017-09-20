@@ -21,10 +21,39 @@ class App extends Component {
             textScreen: prevState.textScreen + keyPressed
           };
         }
+        else{
+          return{
+            textScreen: this.calculateResult()
+          };
+        }
       });    
   };
 
   calculateResult(){
+    const operation = this.state.textScreen;
+    let result = 0;
+    if(operation.includes('+')){
+    
+      const [num1, num2] = operation.split('+');
+      result = parseFloat(num1) + parseFloat(num2);
+    
+    }else if(operation.includes('-')){
+
+      const [num1, num2] = operation.split('-');
+      result = parseFloat(num1) - parseFloat(num2);
+   
+    }else if(operation.includes('*')){
+   
+      const [num1, num2] = operation.split('*');
+      result = parseFloat(num1) * parseFloat(num2);
+   
+    }else{
+   
+      const [num1, num2] = operation.split('/');
+      result = parseFloat(num1) / parseFloat(num2);
+   
+    }
+    return result;
   }
 
 

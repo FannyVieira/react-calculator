@@ -11,7 +11,10 @@ class Cursor extends Component{
     }
 }
 Cursor.propTypes = {
-    textScreen: React.PropTypes.string.isRequired
+    textScreen: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]),
 };
 
 export default Cursor;
