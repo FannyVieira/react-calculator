@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Cursor extends Component{ 
-    render(){
-        return(
-            <div className="top">
-                <div className="screen">{this.props.textScreen}</div>
-            </div>
-        )
-    }
-}
+const Cursor = (props) => {
+    const { textScreen } = props;
+    return(
+        <div className="top">
+            <div className="screen">{ textScreen }</div>
+        </div>
+    );
+};
+
 Cursor.propTypes = {
     textScreen: PropTypes.oneOfType([
         PropTypes.number,
